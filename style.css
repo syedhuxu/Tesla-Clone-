@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+}
+
+body {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+header nav .logo svg {
+  width: 7.5rem;
+}
+header nav .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+header nav .links a {
+  font-size: 0.9175rem;
+  color: #171a20;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+header nav .links a:hover {
+  color: #3e6ae1;
+}
+header nav .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header nav .icons svg {
+  width: 1.5rem;
+  color: #171a20;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+header nav .icons svg:hover {
+  color: #3e6ae1;
+}
+header nav button {
+  padding: 0.5rem 1.5rem;
+  background-color: #f5f5f5;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+header nav button:hover {
+  background-color: #111;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
