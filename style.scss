@@ -54,6 +54,7 @@ $sp-6: 4rem;
 $sp-7: 4.5rem;
 
 // Breakpoints (Mobile-first)
+$bp-exs: 320px; // extra small phones
 $bp-sm: 480px; // small phones
 $bp-md: 768px; // tablets
 $bp-lg: 1024px; // small laptops
@@ -70,11 +71,6 @@ $bp-xl: 1280px; // desktops
   justify-content: space-between;
   align-items: center;
 }
-// @mixin container {
-//   width: 90%;
-//   max-width: $max-width;
-//   margin: 0 auto;
-// }
 
 header {
   width: 100%;
@@ -120,6 +116,7 @@ header {
       border-radius: 4px;
       cursor: pointer;
       font-size: $fs-base;
+      font-weight: 600;
       transition: background-color 0.3s ease;
       display: none;
       &:hover {
@@ -127,5 +124,22 @@ header {
         color: $color-light;
       }
     }
+  }
+}
+@media (max-width: $bp-lg) {
+  header nav {
+    padding: $sp-2 $sp-3;
+  }
+  header nav .logo svg {
+    width: 7rem;
+  }
+  header nav .links {
+    display: none;
+  }
+  header nav .icons {
+    display: none;
+  }
+  header nav button {
+    display: block;
   }
 }
