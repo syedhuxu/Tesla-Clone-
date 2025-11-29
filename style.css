@@ -101,4 +101,69 @@ header nav button:hover {
   header nav button {
     display: block;
   }
+}
+main .hero-section {
+  height: 72vh;
+  padding: 3rem 1.5rem;
+  background-image: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Meet-Model-Y-Desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 1;
+}
+main .hero-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s linear;
+}
+main .hero-section .buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+main .hero-section .buttons button:nth-child(1) {
+  padding: 0.77rem 1.353rem;
+  background-color: #3e6ae1;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .hero-section .buttons button:nth-child(1):hover {
+  background-color: #3457b1;
+}
+main .hero-section .buttons button:nth-child(2) {
+  padding: 0.77rem 1.353rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .hero-section .buttons button:nth-child(2):hover {
+  background-color: rgb(255, 255, 255);
+}
+
+@media (min-width: 480px) {
+  main .hero-section h2 {
+    font-size: 3rem;
+  }
+  main .hero-section .buttons {
+    gap: 1rem;
+  }
+  main .hero-section .buttons button:nth-child(1),
+  main .hero-section .buttons button:nth-child(2) {
+    padding: 0.5rem 4rem;
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */

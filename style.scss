@@ -41,6 +41,8 @@ $fs-sb: 0.9175rem;
 $fs-base: 1rem;
 $fs-lg: 1.25rem;
 $fs-xl: 2rem;
+$fs-2xl: 3rem;
+$fs-3xl: 4rem;
 
 // Spacing
 $sp-0: 0.25rem;
@@ -52,6 +54,8 @@ $sp-4: 2rem;
 $sp-5: 3rem;
 $sp-6: 4rem;
 $sp-7: 4.5rem;
+$sp-8: 5rem;
+$sp-9: 6rem;
 
 // Breakpoints (Mobile-first)
 $bp-exs: 320px; // extra small phones
@@ -126,6 +130,7 @@ header {
     }
   }
 }
+// small laptops and below
 @media (max-width: $bp-lg) {
   header nav {
     padding: $sp-2 $sp-3;
@@ -142,4 +147,84 @@ header {
   header nav button {
     display: block;
   }
+}
+main {
+  .hero-section {
+    height: 72vh;
+    padding: $sp-5 $sp-3;
+    background-image: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Meet-Model-Y-Desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-light;
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: $sp-4;
+      transition: all 0.3s linear;
+    }
+
+    .buttons {
+      display: flex;
+      gap: $sp-1;
+      button:nth-child(1) {
+        padding: 0.77rem 1.353rem;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 4px;
+        color: $color-light;
+        font-weight: 500;
+        font-size: $fs-base;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: $color-primary-dark;
+        }
+      }
+      button:nth-child(2) {
+        padding: 0.77rem 1.353rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 4px;
+        color: $color-dark;
+        font-size: $fs-base;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+}
+// 480px and above
+@media (min-width: $bp-sm) {
+  main .hero-section {
+    h2 {
+      font-size: $fs-2xl;
+    }
+    .buttons {
+      gap: $sp-2;
+      button:nth-child(1),
+      button:nth-child(2) {
+        padding: $sp-1 $sp-6;
+        font-size: $fs-lg;
+      }
+    }
+  }
+}
+//768px and above
+@media (min-width: $bp-md) {
+}
+//1024px and above
+@media (min-width: $bp-lg) {
+}
+//1280px and above
+@media (min-width: $bp-xl) {
 }
