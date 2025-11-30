@@ -21,6 +21,7 @@ body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  padding-top: 60px;
 }
 // Colors
 $color-dark: #111;
@@ -32,7 +33,6 @@ $color-primary-dark: #3457b1;
 $btn-bgclr: #f5f5f5;
 
 // Container widths
-$max-width: 1200px;
 
 // Font sizes
 $fs-xs: 0.75rem;
@@ -60,6 +60,7 @@ $sp-9: 6rem;
 // Breakpoints (Mobile-first)
 $bp-exs: 320px; // extra small phones
 $bp-sm: 480px; // small phones
+$bp-hmd: 600px; // wide  phones
 $bp-md: 768px; // tablets
 $bp-lg: 1024px; // small laptops
 $bp-xl: 1280px; // desktops
@@ -78,6 +79,13 @@ $bp-xl: 1280px; // desktops
 
 header {
   width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999;
+
   nav {
     @include flex-between;
     padding: $sp-2 $sp-5;
@@ -89,6 +97,7 @@ header {
     .links {
       @include flex-center;
       gap: $sp-3;
+
       a {
         font-size: $fs-sb;
         color: $color-text;
@@ -133,7 +142,7 @@ header {
 // small laptops and below
 @media (max-width: $bp-lg) {
   header nav {
-    padding: $sp-2 $sp-3;
+    padding: $sp-1 $sp-3;
   }
   header nav .logo svg {
     width: 7rem;
@@ -149,6 +158,12 @@ header {
   }
 }
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  section {
+    width: 100%;
+  }
   .hero-section {
     height: 72vh;
     padding: $sp-5 $sp-3;
@@ -202,6 +217,104 @@ main {
       }
     }
   }
+  .section2 {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+      overflow: auto;
+
+      .card {
+        padding: $sp-3 $sp-2-5;
+        display: flex;
+        gap: 17rem;
+        flex-shrink: 0;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: calc(50% + 5%) calc(50% - 12%);
+        background-repeat: no-repeat;
+
+        h3 {
+          color: $color-light;
+          font-size: $fs-lg;
+          width: 20.5rem;
+        }
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 1.3rem;
+          .text {
+            display: flex;
+            flex-direction: column;
+            h4 {
+              font-size: $fs-2xl;
+              color: $color-grey;
+            }
+            a {
+              font-size: $fs-lg;
+              color: $color-grey;
+              text-decoration: white underline;
+              font-weight: 500;
+            }
+          }
+          .buttons {
+            display: flex;
+            gap: $sp-1;
+            button:nth-child(1) {
+              padding: 0.77rem 2.4rem;
+              background-color: $color-primary;
+              border: none;
+              border-radius: 4px;
+              color: $color-light;
+              font-weight: 500;
+              font-size: $fs-base;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              &:hover {
+                background-color: $color-primary-dark;
+              }
+            }
+            button:nth-child(2) {
+              padding: 0.77rem 2.4rem;
+              background-color: rgb(255, 255, 255);
+              border: none;
+              border-radius: 4px;
+              color: $color-dark;
+              font-size: $fs-base;
+              font-weight: 500;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              &:hover {
+                background-color: rgba(255, 255, 255, 1);
+              }
+            }
+          }
+        }
+      }
+      .card:nth-child(1) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-3-Mobile-US-v2.jpg);
+      }
+      .card:nth-child(2) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-Y-Mobile-US-v2.jpg);
+      }
+      .card:nth-child(3) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Cybertruck-Mobile-US-v2.jpg);
+      }
+      .card:nth-child(4) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-S-Desktop-US-v3.jpg);
+      }
+    }
+    .wrapper::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+@media (min-width: 375px) {
+  main .section2 .wrapper .card:nth-child(1) {
+    margin-left: 1.1rem;
+  }
 }
 // 480px and above
 @media (min-width: $bp-sm) {
@@ -219,11 +332,82 @@ main {
     }
   }
 }
+//below 600px
+@media (max-width: $bp-hmd) {
+  body {
+    padding-top: 0px;
+  }
+  header {
+    position: absolute;
+    z-index: 9999;
+    background: transparent;
+    .logo {
+      svg {
+        color: #fff;
+      }
+    }
+    nav button {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  }
+  main {
+    .hero-section {
+      padding-top: $sp-7;
+    }
+  }
+}
+//600px and above
+@media (min-width: $bp-hmd) {
+  main .section2 .wrapper .card:nth-child(1) {
+    margin-left: 0;
+  }
+  main .section2 {
+    .wrapper .card {
+      h3 {
+        width: 37.5rem;
+      }
+    }
+  }
+}
 //768px and above
 @media (min-width: $bp-md) {
+  main .section2 .wrapper {
+    gap: 1rem;
+    .card {
+      gap: 25rem;
+      h3 {
+        width: 40rem;
+      }
+    }
+  }
+  main .section2 .wrapper .card:nth-child(1) {
+    margin-left: 1.5rem;
+  }
 }
+
 //1024px and above
 @media (min-width: $bp-lg) {
+  header nav {
+    padding: $sp-2 $sp-5;
+  }
+
+  main {
+    .section2 {
+      .wrapper {
+        .card {
+          .bottom .text h4 {
+            width: 50rem;
+          }
+        }
+        .card:nth-child(1) {
+          margin-left: $sp-5;
+        }
+      }
+    }
+  }
 }
 //1280px and above
 @media (min-width: $bp-xl) {
