@@ -87,10 +87,6 @@ header nav button {
   transition: background-color 0.3s ease;
   display: none;
 }
-header nav button:hover {
-  background-color: #111;
-  color: #fff;
-}
 
 @media (max-width: 1024px) {
   header nav {
@@ -303,6 +299,108 @@ main .section3 .box .bottom button {
   font-weight: 600;
   opacity: 0.888;
 }
+main .section4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.6rem;
+}
+main .section4 .video-div {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .section4 .video-div .vid {
+  width: 100%;
+  height: 100%;
+}
+main .section4 .video-div .vid video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+main .section4 .video-div .text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  color: white;
+  /* Bottom Left Text & Buttons */
+}
+main .section4 .video-div .text .icon {
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+main .section4 .video-div .text .bottom h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+main .section4 .video-div .text .bottom .buttons {
+  display: flex;
+  gap: 1rem;
+}
+main .section4 .video-div .text .bottom .buttons button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+main .section4 .video-div .text .bottom .buttons button:first-child {
+  background: #3b82f6;
+  color: white;
+}
+main .section4 .video-div .text .bottom .buttons button:last-child {
+  background: white;
+  color: black;
+}
+main .section4 .image-div {
+  width: 100%;
+  height: 500px;
+  background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Mobile.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+main .section4 .image-div h3 {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+main .section4 .image-div button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  align-self: flex-start;
+}
 
 @media (min-width: 375px) {
   main .section2 .wrapper .card:nth-child(1) {
@@ -389,6 +487,9 @@ main .section3 .box .bottom button {
   main .section2 .wrapper .card:nth-child(1) {
     margin-left: 1.5rem;
   }
+  main .section4 .image-div {
+    background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Desktop.png);
+  }
 }
 @media (min-width: 1024px) {
   header nav {
@@ -402,6 +503,9 @@ main .section3 .box .bottom button {
   }
   main .section3 {
     padding: 1rem 3rem;
+  }
+  main .section4 {
+    padding: 0.5rem 3rem;
   }
 }
 @media (min-width: 1280px) {
@@ -420,5 +524,15 @@ main .section3 .box .bottom button {
   }
   main .section3 .box .bottom p {
     font-size: 1.214rem;
+  }
+  main .section4 {
+    height: 470px;
+    flex-direction: row;
+  }
+  main .section4 .video-div {
+    width: 68%;
+  }
+  main .section4 .image-div {
+    width: 32%;
   }
 }/*# sourceMappingURL=style.css.map */
