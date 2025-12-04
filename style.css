@@ -452,11 +452,85 @@ main .section5 .container .bottom i {
   padding: 0.8rem;
   border-radius: 50%;
 }
-main .section5 .container .bottom:hover {
-  background: #f8f8f8;
+main .section6 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 4rem 0;
+  gap: 1rem;
 }
-main .section5 .container .bottom:active {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+main .section6 .first {
+  display: flex;
+  flex-direction: column;
+}
+main .section6 .first h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  opacity: 0.888;
+}
+main .section6 .first p {
+  padding: 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  opacity: 0.777;
+}
+main .section6 .second {
+  display: flex;
+  gap: 0.1rem;
+}
+main .section6 .second .part1,
+main .section6 .second .part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+main .section6 .second .part1 .chargers,
+main .section6 .second .part2 .chargers {
+  display: flex;
+  flex-direction: column;
+}
+main .section6 .second .part1 .chargers h4,
+main .section6 .second .part2 .chargers h4 {
+  font-size: 3rem;
+  font-weight: 600;
+  opacity: 0.888;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+main .section6 .second .part1 .chargers h4 i,
+main .section6 .second .part2 .chargers h4 i {
+  color: red;
+  font-size: 2rem;
+  display: inline-block;
+  transform: rotate(270deg);
+}
+main .section6 .second .part1 .chargers p,
+main .section6 .second .part2 .chargers p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  opacity: 0.777;
+}
+main .section6 .second .part1 button,
+main .section6 .second .part2 button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background-color: #171a20;
+  color: #f5f5f5;
+}
+main .section6 .second .part2 .chargers h4 i {
+  transform: rotate(0deg);
+  color: lightseagreen;
+}
+main .section6 .second .part2 button {
+  background-color: #f5f5f5;
+  color: #171a20;
 }
 
 @media (min-width: 375px) {
@@ -536,6 +610,32 @@ main .section5 .container .bottom:active {
   main .section5 .container {
     border-radius: 15px;
   }
+  main .section6 .first h3 {
+    padding: 0 1.25rem;
+    font-size: 3.4rem;
+  }
+  main .section6 .first p {
+    padding: 0 1.25rem;
+    font-size: 1.3rem;
+  }
+  main .section6 .second {
+    gap: 2rem;
+  }
+  main .section6 .second .part1 .chargers h4,
+  main .section6 .second .part2 .chargers h4 {
+    padding: 0 1.25rem;
+    font-size: 3.4rem;
+  }
+  main .section6 .second .part1 .chargers p,
+  main .section6 .second .part2 .chargers p {
+    padding: 0 1.25rem;
+    font-size: 1.3rem;
+  }
+  main .section6 .second .part1 button,
+  main .section6 .second .part2 button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 768px) {
   main .section2 .wrapper {
@@ -552,6 +652,27 @@ main .section5 .container .bottom:active {
   }
   main .section4 .image-div {
     background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Desktop.png);
+  }
+  main .section6 .first h3 {
+    padding: 0 3rem;
+    font-size: 3.4rem;
+  }
+  main .section6 .first p {
+    padding: 0 3rem;
+    font-size: 1.3rem;
+  }
+  main .section6 .second {
+    gap: 2rem;
+  }
+  main .section6 .second .part1 .chargers h4,
+  main .section6 .second .part2 .chargers h4 {
+    padding: 0 3rem;
+    font-size: 3.4rem;
+  }
+  main .section6 .second .part1 .chargers p,
+  main .section6 .second .part2 .chargers p {
+    padding: 0 3rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) {
@@ -601,5 +722,18 @@ main .section5 .container .bottom:active {
   }
   main .section4 .image-div {
     width: 32%;
+  }
+  main .section6 {
+    padding-right: 3rem;
+    flex-direction: row;
+    gap: 0.1rem;
+  }
+  main .section6 .first h3 {
+    padding: 0 3rem;
+    font-size: 3.4rem;
+  }
+  main .section6 .first p {
+    padding: 0 3rem;
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=style.css.map */

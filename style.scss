@@ -75,6 +75,7 @@ $sp-1: 0.5rem;
 $sp-2: 1rem;
 $sp-2-5: 1.25rem;
 $sp-3: 1.5rem;
+$sp-3-5: 1.75rem;
 $sp-4: 2rem;
 $sp-5: 3rem;
 $sp-6: 4rem;
@@ -543,13 +544,84 @@ main {
           padding: 0.8rem;
           border-radius: 50%;
         }
+      }
+    }
+  }
+  .section6 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 4rem 0;
+    gap: 1rem;
+    .first {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: $fs-2xl;
+        font-weight: 600;
+        padding: 0 $sp-2;
+        opacity: 0.888;
+      }
+      p {
+        padding: 0 $sp-2;
+        font-size: 1.15rem;
+        font-weight: 600;
+        opacity: 0.777;
+      }
+    }
+    .second {
+      display: flex;
+      gap: 0.1rem;
+      .part1,
+      .part2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 $sp-2;
 
-        &:hover {
-          background: #f8f8f8;
+        .chargers {
+          display: flex;
+          flex-direction: column;
+          h4 {
+            font-size: $fs-2xl;
+            font-weight: 600;
+            opacity: 0.888;
+            display: flex;
+            align-items: baseline;
+            gap: 0.35rem;
+            i {
+              color: red;
+              font-size: 2rem;
+              display: inline-block;
+              transform: rotate(270deg);
+            }
+          }
+          p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            opacity: 0.777;
+            // padding: 0 $sp-2;
+          }
         }
-
-        &:active {
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        button {
+          padding: 0.8rem 1.6rem;
+          font-size: 1rem;
+          border-radius: 6px;
+          font-weight: 500;
+          cursor: pointer;
+          border: none;
+          background-color: #171a20;
+          color: #f5f5f5;
+        }
+      }
+      .part2 {
+        .chargers h4 i {
+          transform: rotate(0deg);
+          color: lightseagreen;
+        }
+        button {
+          background-color: #f5f5f5;
+          color: #171a20;
         }
       }
     }
@@ -646,6 +718,38 @@ main {
       border-radius: 15px;
     }
   }
+  main .section6 {
+    .first {
+      h3 {
+        padding: 0 $sp-2-5;
+        font-size: 3.4rem;
+      }
+      p {
+        padding: 0 $sp-2-5;
+        font-size: 1.3rem;
+      }
+    }
+    .second {
+      gap: 2rem;
+      .part1,
+      .part2 {
+        .chargers {
+          h4 {
+            padding: 0 $sp-2-5;
+            font-size: 3.4rem;
+          }
+          p {
+            padding: 0 $sp-2-5;
+            font-size: 1.3rem;
+          }
+        }
+        button {
+          padding: 0.9rem 1.8rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
 }
 //768px and above
 @media (min-width: $bp-md) {
@@ -664,6 +768,34 @@ main {
   main .section4 {
     .image-div {
       background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Desktop.png);
+    }
+  }
+  main .section6 {
+    .first {
+      h3 {
+        padding: 0 $sp-5;
+        font-size: 3.4rem;
+      }
+      p {
+        padding: 0 $sp-5;
+        font-size: 1.3rem;
+      }
+    }
+    .second {
+      gap: 2rem;
+      .part1,
+      .part2 {
+        .chargers {
+          h4 {
+            padding: 0 $sp-5;
+            font-size: 3.4rem;
+          }
+          p {
+            padding: 0 $sp-5;
+            font-size: 1.3rem;
+          }
+        }
+      }
     }
   }
 }
@@ -729,6 +861,22 @@ main {
     }
     .image-div {
       width: 32%;
+    }
+  }
+  main .section6 {
+    padding-right: $sp-5;
+    flex-direction: row;
+    gap: 0.1rem;
+
+    .first {
+      h3 {
+        padding: 0 $sp-5;
+        font-size: 3.4rem;
+      }
+      p {
+        padding: 0 $sp-5;
+        font-size: 1.3rem;
+      }
     }
   }
 }
