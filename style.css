@@ -532,9 +532,119 @@ main .section6 .second .part2 button {
   background-color: #f5f5f5;
   color: #171a20;
 }
+main .section7 .wrapper {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+}
+main .section7 .wrapper .card {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  gap: 17rem;
+  flex-shrink: 0;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 55% 38%;
+  background-repeat: no-repeat;
+}
+main .section7 .wrapper .card h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  width: 20.5rem;
+}
+main .section7 .wrapper .card .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+main .section7 .wrapper .card .bottom .text {
+  display: flex;
+  flex-direction: column;
+}
+main .section7 .wrapper .card .bottom .text h4 {
+  font-size: 3rem;
+  color: #f4f4f4;
+}
+main .section7 .wrapper .card .bottom .text a {
+  font-size: 1.25rem;
+  width: 80%;
+  color: #f4f4f4;
+  font-weight: 500;
+}
+main .section7 .wrapper .card .bottom .buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section7 .wrapper .card .bottom .buttons button:nth-child(1) {
+  padding: 0.77rem 2.2rem;
+  background-color: #3e6ae1;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .section7 .wrapper .card .bottom .buttons button:nth-child(1):hover {
+  background-color: #3457b1;
+}
+main .section7 .wrapper .card .bottom .buttons button:nth-child(2) {
+  padding: 0.77rem 2.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .section7 .wrapper .card .bottom .buttons button:nth-child(2):hover {
+  background-color: rgb(255, 255, 255);
+}
+main .section7 .wrapper .card:nth-child(1) {
+  background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Solar-Panels-Desktop-v2.jpg);
+}
+main .section7 .wrapper .card:nth-child(2) {
+  background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Powerwall-Desktop.png);
+}
+main .section7 .wrapper .card:nth-child(3) {
+  background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Megapack-Desktop-v2.jpg);
+}
+main .section7 .wrapper .card:nth-child(4) {
+  background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Solar-Roof-Desktop.png);
+}
+main .section7 .wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 0 4rem 0;
+}
+footer a {
+  color: #171a20;
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 0.67;
+}
+footer .hide {
+  display: none;
+}
 
 @media (min-width: 375px) {
   main .section2 .wrapper .card:nth-child(1) {
+    margin-left: 1.1rem;
+  }
+  main .section7 .wrapper .card:nth-child(1) {
     margin-left: 1.1rem;
   }
 }
@@ -577,7 +687,13 @@ main .section6 .second .part2 button {
   main .section2 .wrapper .card:nth-child(1) {
     margin-left: 0;
   }
+  main .section7 .wrapper .card:nth-child(1) {
+    margin-left: 0;
+  }
   main .section2 .wrapper .card h3 {
+    width: 37.5rem;
+  }
+  main .section7 .wrapper .card h3 {
     width: 37.5rem;
   }
   main .section3 {
@@ -636,6 +752,20 @@ main .section6 .second .part2 button {
     padding: 0.9rem 1.8rem;
     font-size: 1.2rem;
   }
+  footer {
+    margin-top: 4rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  footer a {
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  footer .hide {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   main .section2 .wrapper {
@@ -645,6 +775,18 @@ main .section6 .second .part2 button {
     gap: 25rem;
   }
   main .section2 .wrapper .card h3 {
+    width: 40rem;
+  }
+  main .section7 .wrapper .card:nth-child(1) {
+    margin-left: 1.5rem;
+  }
+  main .section7 .wrapper {
+    gap: 1rem;
+  }
+  main .section7 .wrapper .card {
+    gap: 25rem;
+  }
+  main .section7 .wrapper .card h3 {
     width: 40rem;
   }
   main .section2 .wrapper .card:nth-child(1) {
@@ -694,6 +836,12 @@ main .section6 .second .part2 button {
   main .section5 {
     margin-top: 4.5rem;
     padding: 0.5rem 3rem;
+  }
+  main .section7 .wrapper .card .bottom .text h4 {
+    width: 50rem;
+  }
+  main .section7 .wrapper .card:nth-child(1) {
+    margin-left: 3rem;
   }
 }
 @media (min-width: 1280px) {

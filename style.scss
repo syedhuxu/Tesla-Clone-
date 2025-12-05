@@ -626,9 +626,123 @@ main {
       }
     }
   }
+  .section7 {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+      overflow: auto;
+
+      .card {
+        padding: $sp-3 $sp-2-5;
+        display: flex;
+        gap: 17rem;
+        flex-shrink: 0;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: calc(50% + 5%) calc(50% - 12%);
+        background-repeat: no-repeat;
+
+        h3 {
+          color: $color-light;
+          font-size: $fs-lg;
+          width: 20.5rem;
+        }
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 1.3rem;
+          .text {
+            display: flex;
+            flex-direction: column;
+            h4 {
+              font-size: $fs-2xl;
+              color: $color-grey;
+            }
+            a {
+              font-size: $fs-lg;
+              width: 80%;
+              color: $color-grey;
+              font-weight: 500;
+            }
+          }
+          .buttons {
+            display: flex;
+            gap: $sp-1;
+            button:nth-child(1) {
+              padding: 0.77rem 2.2rem;
+              background-color: $color-primary;
+              border: none;
+              border-radius: 4px;
+              color: $color-light;
+              font-weight: 500;
+              font-size: $fs-base;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              &:hover {
+                background-color: $color-primary-dark;
+              }
+            }
+            button:nth-child(2) {
+              padding: 0.77rem 2.2rem;
+              background-color: rgb(255, 255, 255);
+              border: none;
+              border-radius: 4px;
+              color: $color-dark;
+              font-size: $fs-base;
+              font-weight: 500;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              &:hover {
+                background-color: rgba(255, 255, 255, 1);
+              }
+            }
+          }
+        }
+      }
+      .card:nth-child(1) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Solar-Panels-Desktop-v2.jpg);
+      }
+      .card:nth-child(2) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Powerwall-Desktop.png);
+      }
+      .card:nth-child(3) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Megapack-Desktop-v2.jpg);
+      }
+      .card:nth-child(4) {
+        background-image: url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Solar-Roof-Desktop.png);
+      }
+    }
+    .wrapper::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+footer {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 0 4rem 0;
+
+  a {
+    color: #171a20;
+    font-weight: 700;
+    font-size: $fs-base;
+    opacity: 0.67;
+  }
+  .hide {
+    display: none;
+  }
 }
 @media (min-width: 375px) {
   main .section2 .wrapper .card:nth-child(1) {
+    margin-left: 1.1rem;
+  }
+  main .section7 .wrapper .card:nth-child(1) {
     margin-left: 1.1rem;
   }
 }
@@ -680,7 +794,17 @@ main {
   main .section2 .wrapper .card:nth-child(1) {
     margin-left: 0;
   }
+  main .section7 .wrapper .card:nth-child(1) {
+    margin-left: 0;
+  }
   main .section2 {
+    .wrapper .card {
+      h3 {
+        width: 37.5rem;
+      }
+    }
+  }
+  main .section7 {
     .wrapper .card {
       h3 {
         width: 37.5rem;
@@ -750,10 +874,36 @@ main {
       }
     }
   }
+  footer {
+    margin-top: 4rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    a {
+      font-weight: 500;
+      font-size: $fs-sm;
+    }
+    .hide {
+      display: block;
+    }
+  }
 }
 //768px and above
 @media (min-width: $bp-md) {
   main .section2 .wrapper {
+    gap: 1rem;
+    .card {
+      gap: 25rem;
+      h3 {
+        width: 40rem;
+      }
+    }
+  }
+  main .section7 .wrapper .card:nth-child(1) {
+    margin-left: 1.5rem;
+  }
+  main .section7 .wrapper {
     gap: 1rem;
     .card {
       gap: 25rem;
@@ -828,6 +978,18 @@ main {
     .section5 {
       margin-top: $sp-7;
       padding: $sp-1 $sp-5;
+    }
+    .section7 {
+      .wrapper {
+        .card {
+          .bottom .text h4 {
+            width: 50rem;
+          }
+        }
+        .card:nth-child(1) {
+          margin-left: $sp-5;
+        }
+      }
     }
   }
 }
